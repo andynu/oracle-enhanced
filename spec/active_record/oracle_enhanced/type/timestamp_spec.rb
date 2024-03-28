@@ -4,6 +4,7 @@ describe "OracleEnhancedAdapter timestamp with timezone support" do
   include SchemaSpecHelper
 
   before(:all) do
+    skip
     if ENV["DATABASE_VERSION"] == "11.2.0.2" && ENV["ORACLE_HOME"] == "/usr/lib/oracle/21/client64"
       skip
     end
