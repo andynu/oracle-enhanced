@@ -452,7 +452,7 @@ module ActiveRecord
       end
 
       # Reconnects to the database.
-      def reconnect! # :nodoc:
+      def reconnect!(restore_transactions: true) # :nodoc:
         super
         _connection.reset!
       rescue OracleEnhanced::ConnectionException => e
