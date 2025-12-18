@@ -239,10 +239,6 @@ module ActiveRecord
           cursor.close if cursor
         end
 
-        def write_lob(lob, value, is_binary = false)
-          lob.write value
-        end
-
         def describe(name)
           super
         end
